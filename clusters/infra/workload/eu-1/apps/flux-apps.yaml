@@ -21,7 +21,7 @@ spec:
       group: helm.toolkit.fluxcd.io
       kind: HelmRelease
       version: v2
-  path: ./configs/core/cert-manager
+  path: ./apps/platform/cert-manager
   prune: true
   sourceRef:
     kind: GitRepository
@@ -50,7 +50,7 @@ spec:
       group: helm.toolkit.fluxcd.io
       kind: HelmRelease
       version: v2
-  path: ./configs/core/cert-manager/issuers/cloudflare
+  path: ./apps/platform/cert-manager/issuers/cloudflare
   prune: true
   sourceRef:
     kind: GitRepository
@@ -78,7 +78,7 @@ spec:
       group: helm.toolkit.fluxcd.io
       kind: HelmRelease
       version: v2
-  path: ./configs/core/external-dns
+  path: ./apps/platform/external-dns
   prune: true
   sourceRef:
     kind: GitRepository
@@ -104,7 +104,7 @@ spec:
       group: helm.toolkit.fluxcd.io
       kind: HelmRelease
       version: v2
-  path: ./configs/core/external-secrets
+  path: ./apps/platform/external-secrets
   prune: true
   sourceRef:
     kind: GitRepository
@@ -133,7 +133,7 @@ spec:
       group: helm.toolkit.fluxcd.io
       kind: HelmRelease
       version: v2
-  path: ./configs/core/external-secrets/bitwarden
+  path: ./apps/platform/external-secrets/bitwarden
   prune: true
   sourceRef:
     kind: GitRepository
@@ -159,7 +159,7 @@ spec:
       group: helm.toolkit.fluxcd.io
       kind: HelmRelease
       version: v2
-  path: ./configs/core/ingress-nginx
+  path: ./apps/platform/ingress-nginx
   prune: true
   sourceRef:
     kind: GitRepository
@@ -185,7 +185,7 @@ spec:
       group: helm.toolkit.fluxcd.io
       kind: HelmRelease
       version: v2
-  path: ./configs/core/kube-storage-version-migrator
+  path: ./apps/platform/kube-storage-version-migrator
   prune: true
   sourceRef:
     kind: GitRepository
@@ -213,7 +213,7 @@ spec:
       group: helm.toolkit.fluxcd.io
       kind: HelmRelease
       version: v2
-  path: ./configs/core/kubewarden/controller
+  path: ./apps/platform/kubewarden/controller
   prune: true
   sourceRef:
     kind: GitRepository
@@ -239,7 +239,7 @@ spec:
       group: helm.toolkit.fluxcd.io
       kind: HelmRelease
       version: v2
-  path: ./configs/core/kubewarden/crds
+  path: ./apps/platform/kubewarden/crds
   prune: true
   sourceRef:
     kind: GitRepository
@@ -265,7 +265,7 @@ spec:
       group: helm.toolkit.fluxcd.io
       kind: HelmRelease
       version: v2
-  path: ./configs/core/kyverno
+  path: ./apps/platform/kyverno
   prune: true
   sourceRef:
     kind: GitRepository
@@ -293,7 +293,7 @@ spec:
       group: helm.toolkit.fluxcd.io
       kind: HelmRelease
       version: v2
-  path: ./configs/core/kyverno/policies
+  path: ./apps/platform/kyverno/policies
   prune: true
   sourceRef:
     kind: GitRepository
@@ -319,7 +319,7 @@ spec:
       group: helm.toolkit.fluxcd.io
       kind: HelmRelease
       version: v2
-  path: ./configs/public/lubelogger
+  path: ./apps/public/lubelogger
   prune: true
   sourceRef:
     kind: GitRepository
@@ -345,7 +345,7 @@ spec:
       group: helm.toolkit.fluxcd.io
       kind: HelmRelease
       version: v2
-  path: ./configs/core/reloader
+  path: ./apps/platform/reloader
   prune: true
   sourceRef:
     kind: GitRepository
@@ -373,7 +373,7 @@ spec:
       group: helm.toolkit.fluxcd.io
       kind: HelmRelease
       version: v2
-  path: ./configs/core/tailscale
+  path: ./apps/platform/tailscale
   prune: true
   sourceRef:
     kind: GitRepository
@@ -434,5 +434,5 @@ metadata:
 spec:
   interval: 5m0s
   ref:
-    commit: 58f7f813ba99aaed07bd267bfc855bf878026db6
+    commit: 1d856be3755c23f33e10d2cb9db6eb0cd4e5fe42
   url: https://github.com/anza-labs/manifests

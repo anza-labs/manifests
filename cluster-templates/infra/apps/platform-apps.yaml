@@ -4,21 +4,21 @@ kind: Kustomization
 metadata:
   name: kube-storage-version-migrator
 spec:
-  path: "./configs/core/kube-storage-version-migrator"
+  path: "./apps/platform/kube-storage-version-migrator"
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
   name: kyverno
 spec:
-  path: "./configs/core/kyverno"
+  path: "./apps/platform/kyverno"
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
   name: kyverno-policies
 spec:
-  path: "./configs/core/kyverno/policies"
+  path: "./apps/platform/kyverno/policies"
   dependsOn:
   - name: kyverno
 ---
@@ -27,14 +27,14 @@ kind: Kustomization
 metadata:
   name: cert-manager
 spec:
-  path: "./configs/core/cert-manager"
+  path: "./apps/platform/cert-manager"
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
   name: cert-manager-issuers-cloudflare
 spec:
-  path: "./configs/core/cert-manager/issuers/cloudflare"
+  path: "./apps/platform/cert-manager/issuers/cloudflare"
   dependsOn:
   - name: cert-manager
   - name: external-secrets-bitwarden
@@ -44,14 +44,14 @@ kind: Kustomization
 metadata:
   name: kubewarden-crds
 spec:
-  path: "./configs/core/kubewarden/crds"
+  path: "./apps/platform/kubewarden/crds"
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
   name: kubewarden-controller
 spec:
-  path: "./configs/core/kubewarden/controller"
+  path: "./apps/platform/kubewarden/controller"
   dependsOn:
   - name: kubewarden-crds
 ---
@@ -60,14 +60,14 @@ kind: Kustomization
 metadata:
   name: external-secrets
 spec:
-  path: "./configs/core/external-secrets"
+  path: "./apps/platform/external-secrets"
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
   name: external-secrets-bitwarden
 spec:
-  path: "./configs/core/external-secrets/bitwarden"
+  path: "./apps/platform/external-secrets/bitwarden"
   dependsOn:
   - name: external-secrets
   - name: cert-manager
@@ -77,14 +77,14 @@ kind: Kustomization
 metadata:
   name: ingress-nginx
 spec:
-  path: "./configs/core/ingress-nginx"
+  path: "./apps/platform/ingress-nginx"
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
   name: tailscale
 spec:
-  path: "./configs/core/tailscale"
+  path: "./apps/platform/tailscale"
   dependsOn:
   - name: external-secrets
 ---
@@ -93,4 +93,4 @@ kind: Kustomization
 metadata:
   name: reloader
 spec:
-  path: "./configs/core/reloader"
+  path: "./apps/platform/reloader"
