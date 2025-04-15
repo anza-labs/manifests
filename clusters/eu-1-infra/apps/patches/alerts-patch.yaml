@@ -2,4 +2,4 @@
   path: /spec/eventMetadata
   value:
     env: "infra"
-    cluster: eu-1
+    cluster: eu-1-infra

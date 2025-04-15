@@ -434,5 +434,5 @@ metadata:
 spec:
   interval: 5m0s
   ref:
-    commit: 1d856be3755c23f33e10d2cb9db6eb0cd4e5fe42
+    commit: 4d4d5940a67c9590d85e4a41d78aa6f8c45ae61c
   url: https://github.com/anza-labs/manifests
