@@ -243,7 +243,7 @@ metadata:
 spec:
   interval: 5m0s
   ref:
-    commit: 658bc1098d2c2e62ca26924a0299dcdb249abc99
+    commit: 58f7f813ba99aaed07bd267bfc855bf878026db6
   url: https://github.com/anza-labs/manifests
 ---
 apiVersion: source.toolkit.fluxcd.io/v1
